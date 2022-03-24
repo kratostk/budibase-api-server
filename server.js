@@ -11,9 +11,9 @@ app.post("/login", async (req, res) => {
   const { username, password } = req.body;
 
   if (username !== "test" || password !== "12345") {
-    res.status(400).send(false);
+    res.status(400).json({ value: false });
   } else {
-    res.status(200).send(true);
+    res.status(200).json({ value: true });
   }
 });
 
