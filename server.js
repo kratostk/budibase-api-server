@@ -9,7 +9,12 @@ app.get("/", (req, res) => {
 });
 app.post("/login", async (req, res) => {
   const { username, password } = req.body;
-  res.status(200).json({ username, password });
+
+  if (username !== "test" || password !== "12345") {
+    res.status(400).json(false);
+  } else {
+    res.status(200).json(true);
+  }
 });
 
 const port = process.env.PORT || 5000;
