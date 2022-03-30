@@ -8,6 +8,10 @@ class AuthError {
     return new AuthError(400, message);
   }
 
+  static unauthorize(message) {
+    return new AuthError(401, message);
+  }
+
   static internal(message) {
     return new AuthError(500, message);
   }

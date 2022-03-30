@@ -10,6 +10,7 @@ app.use(cors());
 
 // HANDLE ROUTES
 app.use("/auth/login", require("./routes/auth/login"));
+app.use("/auth/register", require("./routes/auth/register"));
 
 // ERROR HANDLE
 app.use(errorHandler);
